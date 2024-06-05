@@ -1,8 +1,22 @@
-<mat-sidenav-container>
-  <mat-sidenav mode="side" opened>
-    <app-sidebar></app-sidebar>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-toolbar>
+      <button mat-icon-button (click)="sidenav.close()">
+        <mat-icon aria-label="Close sidebar">close</mat-icon>
+      </button>
+      Menu
+    </mat-toolbar>
+    <mat-nav-list>
+      <app-sidebar></app-sidebar>
+    </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
+    <mat-toolbar>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Cemetery App</span>
+    </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

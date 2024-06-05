@@ -4,6 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,6 +31,9 @@ import { PlotService } from './plot.service';
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    MatToolbarModule,
     AppRoutingModule,
   ],
   providers: [
