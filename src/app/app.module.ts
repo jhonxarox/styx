@@ -13,6 +13,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { MapComponent } from './map/map.component';
+import { PlotService } from './plot.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MapComponent } from './map/map.component';
   ],
   providers: [
     provideAnimationsAsync(),
-    provideHttpClient(withInterceptorsFromDi())
+    provideHttpClient(withInterceptorsFromDi()),
+    PlotService,
   ],
   bootstrap: [AppComponent]
 })
